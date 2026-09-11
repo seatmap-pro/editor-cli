@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/seatmap-pro/editor-cli/blob/main/SECURITY.md
+    about: Report privately by email instead of opening a public issue.

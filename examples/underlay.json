@@ -1,0 +1,42 @@
+{
+  "schema": {
+    "name": "Hall with floorplan",
+    "description": "Seated blocks traced over an imported SVG floorplan",
+    "draft": true
+  },
+  "underlay": {
+    "file": "floorplan.svg",
+    "position": { "x": -120, "y": -420 },
+    "width": 1040,
+    "height": 840,
+    "scale": 1
+  },
+  "sections": [
+    {
+      "name": "Block A",
+      "type": "grid",
+      "position": { "x": 20, "y": -120 },
+      "rows": 8,
+      "seatsPerRow": 12,
+      "rowLabels": { "left": true, "right": true },
+      "title": { "position": "TOP" },
+      "numbering": {
+        "rows": { "format": "letters", "from": "A", "direction": "toBottom" },
+        "seats": { "from": "1", "direction": "toRight" }
+      }
+    },
+    {
+      "name": "Block B",
+      "type": "grid",
+      "position": { "x": 440, "y": -120 },
+      "rows": 8,
+      "seatsPerRow": 12,
+      "rowLabels": { "left": true, "right": true },
+      "title": { "position": "TOP" },
+      "numbering": {
+        "rows": { "format": "letters", "from": "A", "direction": "toBottom" },
+        "seats": { "from": "13", "direction": "toRight" }
+      }
+    }
+  ]
+}

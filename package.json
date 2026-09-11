@@ -1,0 +1,73 @@
+{
+  "name": "@seatmap.pro/editor-cli",
+  "version": "0.1.0",
+  "description": "Command-line client and Model Context Protocol server for the Seatmap.pro editor service",
+  "license": "MIT",
+  "author": {
+    "name": "Andy Yusin",
+    "email": "ay@seatmap.pro",
+    "url": "https://seatmap.pro"
+  },
+  "homepage": "https://github.com/seatmap-pro/editor-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seatmap-pro/editor-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seatmap-pro/editor-cli/issues"
+  },
+  "keywords": [
+    "seatmap",
+    "seating-chart",
+    "venue",
+    "ticketing",
+    "cli",
+    "mcp",
+    "model-context-protocol",
+    "typescript"
+  ],
+  "type": "module",
+  "packageManager": "yarn@4.13.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "seatmap": "./bin/seatmap.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "examples",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "dev": "node --experimental-strip-types src/main.ts",
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "prepack": "yarn build",
+    "test": "vitest run --coverage --reporter=default --reporter=junit --outputFile=coverage/junit.xml",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10",
+    "globals": "^17",
+    "prettier": "^3.5.3",
+    "rimraf": "^5.0.5",
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

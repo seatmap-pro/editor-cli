@@ -1,0 +1,50 @@
+{
+  "venue": {
+    "name": "Example Arena",
+    "address": "10 Arena Way"
+  },
+  "schema": {
+    "name": "Concert Bowl",
+    "draft": true
+  },
+  "sections": [
+    {
+      "name": "Block A",
+      "type": "grid",
+      "position": { "x": -900, "y": -300 },
+      "rows": 10,
+      "seatsPerRow": 18,
+      "rowLabels": { "left": true },
+      "numbering": { "rows": { "from": "1" }, "seats": { "from": "1" } }
+    },
+    {
+      "name": "Block B",
+      "type": "grid",
+      "position": { "x": 400, "y": -300 },
+      "rows": 10,
+      "seatsPerRow": 18,
+      "rowLabels": { "right": true },
+      "numbering": { "rows": { "from": "1" }, "seats": { "from": "1", "direction": "toLeft" } }
+    },
+    {
+      "name": "Upper Ring",
+      "type": "arc",
+      "position": { "x": 0, "y": -900 },
+      "rows": 8,
+      "seatsPerRow": 44,
+      "radius": 1000,
+      "arcDegrees": 140,
+      "rowSpacing": 36,
+      "numbering": { "rows": { "format": "roman", "from": "I" }, "seats": { "from": "1" } }
+    },
+    {
+      "name": "Floor GA",
+      "type": "ga",
+      "position": { "x": -300, "y": -240 },
+      "shape": "RECT",
+      "width": 600,
+      "height": 420,
+      "fill": "#e5e9f0"
+    }
+  ]
+}

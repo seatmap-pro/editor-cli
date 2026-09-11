@@ -1,0 +1,122 @@
+{
+  "venue": {
+    "name": "CLI Test Venue"
+  },
+  "schema": {
+    "name": "CLI Smoke Test",
+    "description": "editor-cli smoke spec: 2 seated sections, 3 GA zones, 1 stage",
+    "draft": true
+  },
+  "shapes": [
+    {
+      "type": "stage",
+      "position": {
+        "x": 0,
+        "y": -280
+      },
+      "width": 620,
+      "height": 120,
+      "text": "STAGE",
+      "fill": "#3b4252",
+      "textColor": "#eceff4"
+    }
+  ],
+  "sections": [
+    {
+      "name": "FZ1",
+      "type": "ga",
+      "position": {
+        "x": 0,
+        "y": -110
+      },
+      "shape": "RECT",
+      "width": 195,
+      "height": 150,
+      "fill": "#d8dee9",
+      "title": {
+        "position": "TOP"
+      }
+    },
+    {
+      "name": "FZ2",
+      "type": "ga",
+      "position": {
+        "x": 212,
+        "y": -110
+      },
+      "shape": "RECT",
+      "width": 195,
+      "height": 150,
+      "fill": "#d8dee9",
+      "title": {
+        "position": "TOP"
+      }
+    },
+    {
+      "name": "FZ3",
+      "type": "ga",
+      "position": {
+        "x": 424,
+        "y": -110
+      },
+      "shape": "RECT",
+      "width": 195,
+      "height": 150,
+      "fill": "#d8dee9",
+      "title": {
+        "position": "TOP"
+      }
+    },
+    {
+      "name": "A",
+      "type": "grid",
+      "position": {
+        "x": 0,
+        "y": 110
+      },
+      "rows": 10,
+      "seatsPerRow": 5,
+      "rowLabels": {
+        "left": true
+      },
+      "title": {
+        "position": "TOP"
+      },
+      "numbering": {
+        "rows": {
+          "format": "letters",
+          "from": "A"
+        },
+        "seats": {
+          "from": "1"
+        }
+      }
+    },
+    {
+      "name": "B",
+      "type": "grid",
+      "position": {
+        "x": 220,
+        "y": 110
+      },
+      "rows": 12,
+      "seatsPerRow": 17,
+      "rowLabels": {
+        "left": true,
+        "right": true
+      },
+      "title": {
+        "position": "TOP"
+      },
+      "numbering": {
+        "rows": {
+          "format": "letters",
+          "from": "A"
+        },
+        "seats": {
+          "from": "1"
+        }
+      }
+    }
+  ]
+}

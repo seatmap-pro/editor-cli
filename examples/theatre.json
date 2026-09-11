@@ -1,0 +1,59 @@
+{
+  "venue": {
+    "name": "Example Theatre",
+    "address": "1 Example Street",
+    "lat": 56.9496,
+    "lng": 24.1052
+  },
+  "schema": {
+    "name": "Main Auditorium",
+    "description": "Stalls, circle and a standing pit",
+    "draft": true
+  },
+  "sections": [
+    {
+      "name": "Stalls",
+      "type": "grid",
+      "position": { "x": 0, "y": 0 },
+      "rows": 12,
+      "seatsPerRow": 24,
+      "rowLabels": { "left": true, "right": true },
+      "title": { "position": "TOP" },
+      "outline": {
+        "mode": "AUTO",
+        "padding": { "top": 20, "right": 20, "bottom": 20, "left": 20 }
+      },
+      "numbering": {
+        "rows": { "format": "letters", "from": "A", "direction": "toBottom" },
+        "seats": { "from": "1", "direction": "toRight" }
+      },
+      "flags": [{ "row": "A", "seats": ["1", "2", "23", "24"], "accessible": true }]
+    },
+    {
+      "name": "Dress Circle",
+      "type": "arc",
+      "position": { "x": 336, "y": -520 },
+      "rows": 6,
+      "seatsPerRow": 30,
+      "radius": 620,
+      "arcDegrees": 80,
+      "rowSpacing": 34,
+      "facing": "in",
+      "rowLabels": { "left": true, "right": true },
+      "numbering": {
+        "rows": { "format": "letters", "from": "A" },
+        "seats": { "from": "1" }
+      }
+    },
+    {
+      "name": "Standing Pit",
+      "type": "ga",
+      "position": { "x": 60, "y": -220 },
+      "shape": "RECT",
+      "width": 560,
+      "height": 160,
+      "fill": "#d8dee9",
+      "title": { "position": "TOP" }
+    }
+  ]
+}

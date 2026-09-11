@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "seatmap": {
+      "command": "seatmap",
+      "args": ["mcp", "--profile", "dev"]
+    },
+    "seatmap-writable": {
+      "command": "seatmap",
+      "args": ["mcp", "--profile", "staging", "--allow-write"]
+    }
+  }
+}
