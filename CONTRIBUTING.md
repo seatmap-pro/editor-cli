@@ -50,6 +50,12 @@ All four must pass. Continuous integration runs the same commands on Node 22 and
 
 [Conventional Commits](https://www.conventionalcommits.org/), no emojis. `feat:` for a new capability, `fix:` for a bug, `docs:`, `refactor:`, `test:`, `chore:` for the rest.
 
+## Releases
+
+The npm package is published by CI, never from a laptop. Bump `version` in `package.json`, merge that, then publish a GitHub Release whose tag is the same version with a leading `v`. The release workflow refuses to publish if the two disagree.
+
+It reruns the full check suite before publishing, and publishes with [npm provenance](https://docs.npmjs.com/generating-provenance-statements), so every release on npm is traceable to the commit and workflow that built it. A tag carrying a prerelease suffix, such as `v0.2.0-rc.1`, publishes under the `next` dist-tag rather than `latest`.
+
 ## Reporting bugs
 
 Include the command you ran, the editor service version you ran it against, and the output with `--verbose`. That flag logs each request method and URL to stderr, so check the query parameters for anything you would rather not publish.
