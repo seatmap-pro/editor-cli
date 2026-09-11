@@ -20,9 +20,15 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           registry-url: https://registry.npmjs.org
           cache: yarn
+
+      - name: Check the npm client can use trusted publishing
+        run: |
+          npm install -g npm@latest
+          npm --version
+          node --version
 
       - name: Install
         run: yarn install --immutable
@@ -57,8 +63,6 @@ jobs:
       - name: Publish to npm
         run: |
           case "$GITHUB_REF_NAME" in
-            *-*) npm publish --provenance --access public --tag next ;;
-            *) npm publish --provenance --access public ;;
+            *-*) npm publish --access public --tag next ;;
+            *) npm publish --access public ;;
           esac
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

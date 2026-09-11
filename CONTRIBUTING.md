@@ -54,7 +54,7 @@ All four must pass. Continuous integration runs the same commands on Node 22 and
 
 The npm package is published by CI, never from a laptop. Bump `version` in `package.json`, merge that, then publish a GitHub Release whose tag is the same version with a leading `v`. The release workflow refuses to publish if the two disagree.
 
-It reruns the full check suite before publishing, and publishes with [npm provenance](https://docs.npmjs.com/generating-provenance-statements), so every release on npm is traceable to the commit and workflow that built it. A tag carrying a prerelease suffix, such as `v0.2.0-rc.1`, publishes under the `next` dist-tag rather than `latest`.
+It reruns the full check suite first, and authenticates to npm through [trusted publishing](https://docs.npmjs.com/trusted-publishers) rather than a stored token: the job exchanges a short-lived GitHub OIDC token for publish rights, so no credential exists to leak. [Provenance](https://docs.npmjs.com/generating-provenance-statements) is attached automatically, which makes every release on npm traceable to the commit and workflow that built it. A tag carrying a prerelease suffix, such as `v0.2.0-rc.1`, publishes under the `next` dist-tag rather than `latest`.
 
 ## Reporting bugs
 
